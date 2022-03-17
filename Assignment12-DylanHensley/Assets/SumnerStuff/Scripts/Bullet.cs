@@ -16,6 +16,11 @@ public class Bullet : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if (isServer)
+        {
+            Player player = NetworkIdentity.spawned[parentNetId].GetComponent<Player>();
+            player.score += 100;
+            Destroy(other.gameObject);
+        }
     }
 }
