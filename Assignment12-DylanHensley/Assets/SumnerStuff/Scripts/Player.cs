@@ -3,6 +3,8 @@ using Mirror;
 
 public class Player : NetworkBehaviour
 {
+    public GameObject bulletPrefab;
+
     float moveSpeed = 1.875f;
 
     [SyncVar]
@@ -21,6 +23,11 @@ public class Player : NetworkBehaviour
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float y = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
+        if (Input.GetButtonUp("Fire1"))
+        {
+            CmdDoFire();
+        }
+
         if (isServer)
         {
             RpcMoveIt(x, y);
@@ -29,6 +36,16 @@ public class Player : NetworkBehaviour
         {
             CmdMoveIt(x, y);
         }
+    }
+
+    [Command]
+    public void CmdDoFire()
+    {
+        GameObject bullet = (GameObject)Instantiate(bulletPrefab, this.transform.position + this.transform.right, Quaternion.identity);
+        bullet.GetComponent<Rigidbody>().velocity = Vector3.forward * 17.5f;
+        bullet.GetComponent<Bullet>().color = color;
+        Destroy(bullet, 0.875f);
+        NetworkServer.Spawn(bullet);
     }
 
     [ClientRpc]
