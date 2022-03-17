@@ -212,6 +212,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 1096755991057802036, guid: 1b32bceccaa9fe24c97e36143043bdaa, type: 3}
+  - {fileID: 7815674334500848965, guid: 038fe80a66901a74ba245d8522d5738a, type: 3}
 --- !u!4 &507568279
 Transform:
   m_ObjectHideFlags: 0
