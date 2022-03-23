@@ -14,11 +14,17 @@ public class Player : NetworkBehaviour
     [SyncVar]
     public Color color;
 
+    public const int MaxHealth = 100;
+
+    [SyncVar]
+    public int health = 100;
+
     private Text scoreText;
 
     public override void OnStartClient()
     {
         gameObject.GetComponent<Renderer>().material.color = color;
+        transform.Find("Canvas").GetComponent<Canvas>()
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
@@ -29,6 +35,57 @@ public class Player : NetworkBehaviour
             GetInput();
             scoreText.text = "Score: " + score;
         }
+
+        if (Input.GetKeyDown(KeyCode.Minus))
+        {
+            health--;
+        }
+
+        transform.Find("Canvas").Find("HealthBar").Find("Fill").gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.transform.gameObject.
+            transform.gameObject.transform.gameObject.transform.gameObject.GetComponent<Image>().fillAmount = (this.health / MaxHealth);
     }
 
     void GetInput()
